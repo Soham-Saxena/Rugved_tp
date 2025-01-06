@@ -18,7 +18,7 @@ while vid.isOpened():
     
     cv2.imshow("Ball Tracking",frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(10) & 0xFF == ord('e'):
         break
 
 vid.release()
