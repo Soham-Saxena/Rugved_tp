@@ -1,13 +1,12 @@
 import cv2
+import numpy as np
 
 vid = cv2.VideoCapture("Ball_tracking.mp4")
 
 while vid.isOpened():
     ret, frame = vid.read()
-
     if not ret:
         break
-
     lower_range = np.array([40, 40, 40])
     upper_range = np.array([80, 255, 255])
     frame_hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
